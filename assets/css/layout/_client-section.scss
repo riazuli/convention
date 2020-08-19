@@ -1,0 +1,33 @@
+.clients-section{
+  .client-logo-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .single-client {
+      flex: 0 0 20%;
+      max-width: 20%;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      justify-self: center;
+      align-self: center;
+      @include md{
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+      @include sm{
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      img{
+        max-width: 160px;
+        @include md{
+          max-width: 100%;
+        }
+        @include sm{
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.header-area{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: $pinkColor;
+  .navbar{
+    .navbar-toggler {
+      font-size: 24px;
+      .navbar-toggler-icon {
+        color: lighten($black, 15);
+        font-size: 32px;
+        height: auto;
+      }
+      &[aria-expanded="true"] {
+        .fa-bars {
+          &::before {
+            content: "\f00d";
+          }
+        }
+      }
+      &[aria-expanded="false"] {
+        .fa-bars {
+          &::before {
+            content: "\f0c9";
+          }
+        }
+      }
+    }
+    .navbar-brand{
+      img{
+        max-width: 180px;
+        @include md{
+          max-width: 150px;
+        }
+        @include sm{
+          max-width: 120px;
+        }
+      }
+    }
+    .navbar-nav{
+      .nav-item{
+        .nav-link{
+          color: lighten($black, 15);
+          font-size: 16px;
+          padding: 10px 20px;
+          transition: all 0.3s ease;
+          &:hover{
+            color: $secondaryColorBlue;
+          }
+        }
+      }
+    }
+  }
+}

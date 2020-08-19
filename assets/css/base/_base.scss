@@ -1,0 +1,117 @@
+/* Basic css */
+@font-face {
+  font-family: 'Filson Soft';
+  src: url('../webfonts/FilsonSoft-Bold.woff2') format('woff2'),
+      url('../webfonts/FilsonSoft-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Filson Soft';
+  src: url('../webfonts/FilsonSoft-Regular.woff2') format('woff2'),
+      url('../webfonts/FilsonSoft-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  position: relative;
+}
+body {
+  font-family: $primaryFont;
+  color: $black;
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primaryFont;
+  font-weight: bold;
+  margin: 0 0 15px;
+  line-height: 1.2;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+button:focus {
+  outline: 0 solid;
+}
+
+.section-block {
+  padding: 90px 0px;
+  @include sm{
+    padding: 50px 0px
+  }
+}
+
+.primary-button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 25px;
+  background-color:$primaryColorGreen;
+  color: $white;
+  font-weight: bold;
+  border-radius: 5px;
+  transition:  all 0.3s ease;
+  &.white{
+    background-color: $white;
+    color: $primaryColorGreen;
+    &:hover{
+      background-color: $secondaryColorBlue;
+      color: $white;
+    }
+  }
+  &.full-width {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+  }
+  &:hover{
+    background-color: $secondaryColorBlue;
+    color: $white;
+  }
+}
+
+.section-title{
+  text-align: center;
+  margin-bottom: 50px;
+  @include md{
+    margin-bottom: 30px;
+  }
+  @include sm{
+    margin-bottom: 30px;
+  }
+  h2{
+    color: lighten($black, 15);
+    font-size: 45px;
+    @include md{
+      font-size: 40px;
+    }
+    @include sm{
+      font-size: 28px;
+    }
+  }
+}
