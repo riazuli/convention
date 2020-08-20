@@ -163,6 +163,26 @@ button:focus {
   color: #ffffff;
 }
 
+.gradient-button {
+  border: 0px;
+  min-width: 150px;
+  padding: 8px 20px;
+  display: inline-block;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#00f4bc), to(#E1E000));
+  background: linear-gradient(90deg, #00f4bc 0%, #E1E000 100%);
+  color: #ffffff;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.gradient-button:hover {
+  color: #ffffff;
+  background: -webkit-gradient(linear, right top, left top, from(#00f4bc), to(#E1E000));
+  background: linear-gradient(-90deg, #00f4bc 0%, #E1E000 100%);
+}
+
 .inline-link {
   display: inline-block;
   color: #009FDF;
@@ -288,7 +308,220 @@ button:focus {
 
 .footer-section {
   background: linear-gradient(-70deg, #00C195 0%, #009FDF 80%, #E1E000 100%);
-  padding: 20px 0px;
+  padding: 50px 0px;
+}
+
+.footer-section .footer-logo {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-section .footer-logo {
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer-section .footer-logo img {
+  width: 100%;
+  max-width: 250px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-section .footer-logo img {
+    max-width: 150px;
+  }
+}
+
+.footer-section .signup-title {
+  text-align: right;
+  padding-right: 15px;
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-section .signup-title {
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-section .signup-title {
+    text-align: center;
+    padding-right: 0px;
+  }
+}
+
+.footer-section .signup-title h4 {
+  color: #ffffff;
+}
+
+.footer-section .subscribe-box label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+}
+
+.footer-section .subscribe-box label.required:before {
+  content: "\2217";
+  position: absolute;
+  top: -4px;
+  left: -12px;
+  color: #D84442;
+}
+
+.footer-section .subscribe-box .form-control {
+  border-radius: 7px;
+  border: 0px;
+  width: auto;
+  min-width: 300px;
+}
+
+.footer-section .subscribe-box .disclaimer-text p {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.footer-section .subscribe-box .disclaimer-text a {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer-section .subscribe-box .disclaimer-text a:hover {
+  color: #E1E000;
+}
+
+.footer-section .footer-bottom {
+  padding-top: 70px;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-section .footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+  }
+}
+
+.footer-section .footer-bottom .contact-info a {
+  color: #ffffff;
+  display: block;
+  font-weight: 500;
+}
+
+.footer-section .footer-bottom .contact-info a span {
+  font-weight: 700;
+}
+
+.footer-section .footer-bottom .social-links {
+  margin-top: 10px;
+}
+
+.footer-section .footer-bottom .social-links a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px;
+  font-size: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer-section .footer-bottom .social-links a:hover {
+  color: #E1E000;
+}
+
+.footer-section .footer-bottom .footer-address {
+  color: #ffffff;
+}
+
+.footer-section .footer-bottom .footer-address .text-with-flag {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.footer-section .footer-bottom .footer-address .text-with-flag img {
+  max-width: 40px;
+}
+
+.footer-section .footer-bottom .footer-copyright {
+  position: relative;
+  padding-right: 70px;
+  text-align: right;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-section .footer-bottom .footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-section .footer-bottom .footer-copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.footer-section .footer-bottom .footer-copyright .logo-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 50px;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li {
+  display: inline-block;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li a {
+  position: relative;
+  display: block;
+  padding: 5px 12px;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 12px;
+  width: 2px;
+  background-color: #ffffff;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li a:hover {
+  color: #fffe15;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li:last-child a {
+  padding-right: 0px;
+}
+
+.footer-section .footer-bottom .footer-copyright .footer-link ul li:last-child a:after {
+  display: none;
+}
+
+.footer-section .footer-bottom .footer-copyright .copy-text {
+  font-size: 14px;
 }
 
 .hero-section .video-wrapp {
@@ -351,6 +584,10 @@ button:focus {
   opacity: 0.7;
 }
 
+.cta-section .single-cta:hover .text h4 {
+  color: #fffe15;
+}
+
 .cta-section .single-cta img {
   width: 100%;
   max-width: 100%;
@@ -363,6 +600,11 @@ button:focus {
   width: 100%;
   text-align: center;
   color: #ffffff;
+}
+
+.cta-section .single-cta .text h4 {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .about-section .about-text {

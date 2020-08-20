@@ -18,6 +18,11 @@
       &:before {
         opacity: 0.7;
       }
+      .text{
+        h4{
+          color: lighten($primaryColorGold, 10);
+        }
+      }
     }
     img{
       width: 100%;
@@ -30,6 +35,9 @@
       width: 100%;
       text-align: center;
       color: $white;
+      h4{
+        transition: all 0.3s ease;
+      }
     }
   }
 }
