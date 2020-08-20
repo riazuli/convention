@@ -1,0 +1,20 @@
+.intro-section{
+  background: $primaryColorGreen;
+  background: -moz-linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
+  background: linear-gradient(180deg, rgba(0,193,149,0.3) 30%, rgba(2,127,195,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00c195",endColorstr="#027fc3",GradientType=1);
+  .intro-text{
+    padding: 80px 0px;
+    border-bottom: 1px solid $grayColor;
+    @include sm{
+      padding: 50px 0px;
+    }
+    p{
+      font-size: 26px;
+      @include sm{
+        font-size: 18px;
+      }
+    }
+  }
+}

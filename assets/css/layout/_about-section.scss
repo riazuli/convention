@@ -1,25 +1,6 @@
 .about-section{
-  position: relative;
-  background-color: $primaryColorGreen;
-  color: $white;
-  &::after{
-    content: "";
-    position: absolute;
-    left: 54%;
-    top: 0;
-    width: 46%;
-    height: 100%;
-    background-image: url(../img/about.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    @include sm{
-      display: none;
-    }
-  }
-  .section-title{
-    h2{
-      color: $white;
-    }
+  .about-text{
+    padding-bottom: 40px;;
+    border-bottom: 1px solid $grayColor;
   }
 }

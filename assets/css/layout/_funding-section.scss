@@ -1,0 +1,14 @@
+.funding-section{
+  .funding-texts{
+    h1,h2{
+      @include sm{
+        font-size: 24px;
+      }
+    }
+    h4{
+      @include sm{
+        font-size: 18px;
+      }
+    }
+  }
+}

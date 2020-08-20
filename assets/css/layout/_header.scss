@@ -1,15 +1,22 @@
-.header-area{
-  position: absolute;
+.header-area {
+  // position: absolute;
+  padding: 10px 0px;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 99;
-  background-color: $pinkColor;
-  .navbar{
+  background: linear-gradient(
+    -70deg,
+    $primaryColorGreen 0%,
+    $secondaryColorBlue 80%,
+    $primaryColorGold 100%
+  );
+  .navbar {
+    padding: 0;
     .navbar-toggler {
       font-size: 24px;
       .navbar-toggler-icon {
-        color: lighten($black, 15);
+        color: $white;
         font-size: 32px;
         height: auto;
       }
@@ -28,27 +35,51 @@
         }
       }
     }
-    .navbar-brand{
-      img{
-        max-width: 180px;
-        @include md{
+    .navbar-brand {
+      img {
+        width: 100%;
+        max-width: 170px;
+        @include md {
           max-width: 150px;
         }
-        @include sm{
+        @include sm {
           max-width: 120px;
         }
       }
     }
-    .navbar-nav{
-      .nav-item{
-        .nav-link{
-          color: lighten($black, 15);
-          font-size: 16px;
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-family: $secondaryFont;
+          font-weight: 900;
+          color: $white;
+          font-size: 20px;
           padding: 10px 20px;
           transition: all 0.3s ease;
-          &:hover{
-            color: $secondaryColorBlue;
+          &:hover {
+            color: lighten($primaryColorGold,5);
           }
+        }
+      }
+      &.top-menu {
+        .nav-item {
+          .nav-link {
+            font-size: 16px;
+            @include md{
+              font-size: 20px;
+            }
+            @include sm{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      &.flex-row{
+        @include md{
+          flex-direction: column !important;
+        }
+        @include sm{
+          flex-direction: column !important;
         }
       }
     }

@@ -1,4 +1,9 @@
 .footer-section{
-  background-color: $white;
+  background: linear-gradient(
+    -70deg,
+    $primaryColorGreen 0%,
+    $secondaryColorBlue 80%,
+    $primaryColorGold 100%
+  );
   padding: 20px 0px;
 }
